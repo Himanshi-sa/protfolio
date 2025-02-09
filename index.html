@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- navbar starts here -->
+    <!-- Header Container -->
+<div class="header bg-blue-500 text-white grid grid-cols-1 md:grid-cols-12 p-5 items-center">
+    <!-- Logo Section -->
+    <div class="col-span-2 text-center md:text-left">
+        <a href="#about" class="text-white font-bold text-2xl">Himanshi Sahu</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <div class="block md:hidden text-right">
+        <button id="menu-btn" class="text-white text-2xl">&#9776;</button>
+    </div>
+
+    <!-- Navigation Links (Desktop & Mobile) -->
+    <div id="menu" class="col-span-10 md:flex hidden flex-col md:flex-row md:justify-end gap-x-10 text-center md:text-right">
+        <a href="#about" class="text-white p-2" onclick="showDiv('about')">About</a>
+        <a href="#skills" class="text-white p-2" onclick="showDiv('skills')">Skills</a>
+        <a href="#projects" class="text-white p-2" onclick="showDiv('projects')">Projects</a>
+        <a href="#contact" class="text-white p-2" onclick="showDiv('contact')">Contact</a>
+        <a href="#resume" class="text-white p-2" onclick="showDiv('resume')">Resume</a>
+    </div>
+</div>
+     <!-- navbar ends here -->
+
+      <!-- scrolling to top button starts here -->
+      <button id="scrollToTopBtn" 
+  class="hidden fixed bottom-5 right-5 w-12 h-12 bg-blue-500 text-white rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-blue-700 transition-all"
+  title="Go to top">
+  ⬆
+</button>
+
+<!-- scrolling to top button ends here --> 
+
+    <!-- home section starts here -->
+    <div  class="about-container bg-gradient-to-r from-gray-900 to-gray-700 grid grid-cols-1 md:grid-cols-12 p-6 md:p-12 min-h-screen items-center">
+    
+        <!-- Left Empty Space (Only for large screens) -->
+        <div class="hidden md:block md:col-span-2"></div>
+        
+        <!-- Text Section -->
+        <div class="col-span-1 md:col-span-4 text-white text-center md:text-left">
+            <p class="font-extrabold text-5xl md:text-6xl text-yellow-400 animate-fadeIn">Hello, I'm <span class="text-yellow-500">Himanshi Sahu</span></p>
+            <p class="text-lg md:text-xl mt-4 text-gray-300 leading-relaxed animate-slideIn">I am a passionate software tester transitioning into web development. I love building user-friendly and efficient websites!</p>
+    
+            <!-- Call-to-Action Button -->
+            <a href="#contact" class="mt-6 inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-100 animate-fadeIn">Get in Touch</a>
+        </div>
+    
+        <!-- Image Section -->
+        <div class="col-span-1 md:col-span-4 flex justify-center md:justify-start">
+            <img src="images/hina.jpg" alt="my-image" 
+                 class="rounded-full w-48 md:w-60 h-auto border-4 border-yellow-500 shadow-lg transition-all duration-300 hover:scale-105 animate-fadeIn">
+        </div>
+        
+        <!-- Right Empty Space (Only for large screens) -->
+        <div class="hidden md:block md:col-span-2"></div>
+    
+    </div>
+    
+    
+    <!-- home section ends here -->
+    <!-- about section starts here -->
+    <div id="about" class="bg-gradient-to-r from-gray-900 to-black text-white p-10 rounded-sm shadow-sm w-full grid grid-cols-12">
+        <!-- Left Empty Space -->
+        <div class="col-span-1"></div>
+    
+        <!-- Main Content (10 Columns) -->
+        <div class="col-span-10 space-y-6">
+         
+                <h2 class="text-2xl font-bold text-white mb-4">About Me</h2>
+
+                <p class="text-lg leading-relaxed text-white text-justify mb-4">
+                    I have <span class="font-semibold text-yellow-400">4 years of experience</span> in software testing, 
+                    specializing in <span class="font-semibold text-yellow-400">manual testing</span>. I focus on 
+                    finding and fixing issues, improving software quality, and ensuring a smooth user experience.
+                </p>
+                
+                <p class="text-lg leading-relaxed text-white text-justify mb-4">
+                    My passion for technology has led me to explore <span class="font-semibold text-yellow-400">development</span>. 
+                    I have completed an <span class="font-semibold text-yellow-400">advanced software testing course</span> and am currently 
+                    learning <span class="font-semibold text-yellow-400">MERN stack development</span> to build modern and efficient web applications.
+                </p>
+                
+                <p class="text-lg font-semibold text-yellow-400 text-justify italic">
+                    My goal is to combine my testing and development skills to create high-quality, bug-free, and user-friendly applications.
+                </p>
+                
+        </div>
+    
+        <!-- Right Empty Space -->
+        <div class="col-span-1"></div>
+    </div>
+    
+    
+
+     <!-- about section ends here -->
+      <!-- skills section starts here -->
+      <div id="skills" class="bg-gray-900 text-white p-10 rounded-sm shadow-sm w-full grid grid-cols-1 sm:grid-cols-12">
+        <div class="col-span-1 hidden sm:block"></div>
+    
+        <div class="col-span-10 space-y-6">
+            <h2 class="text-2xl font-bold">Skills</h2>
+    
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-6">
+                <!-- Software Testing Section -->
+                <div class="col-span-12 sm:col-span-6 bg-gray-800 p-4 sm:p-6 rounded-sm shadow-sm hover:shadow-sm transition duration-300">
+                    <h3 class="text-md sm:text-2xl font-bold text-yellow-400 flex items-center gap-2">
+                        🛠️ Software Testing
+                    </h3>
+                    <ul class="text-lg mt-3 space-y-2">
+                        <li>✅ Knowledge of <strong>Smoke, Regression, Unit, System & Cross-Browser Testing</strong></li>
+                        <li>✅ Basic <strong>Java & Selenium</strong></li>
+                    </ul>
+                </div>
+    
+                <!-- Web Development Section -->
+                <div class="col-span-12 sm:col-span-6 bg-gray-800 p-4 sm:p-6 rounded-sm shadow-sm hover:shadow-sm transition duration-300">
+                    <h3 class="text-md sm:text-2xl font-bold text-yellow-400 flex items-center gap-2">
+                        💻 Web Development
+                    </h3>
+                    <ul class="text-lg mt-3 space-y-2">
+                        <li>✅ Knowledge of <strong>React, JavaScript, Bootstrap, TailwindCSS, HTML, CSS</strong></li>
+                        <li>✅ Basic <strong>Git & GitHub</strong></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col-span-1 hidden sm:block"></div>
+    </div>
+    
+        <!-- projects section starts here -->
+           
+        <div id="projects" class="projects-container bg-black text-white p-8 rounded-sm shadow-sm w-full grid grid-cols-12">
+            <div class="col-span-1"></div>
+            <div class="col-span-10">
+                <h2 class="text-3xl font-bold mb-6">Projects</h2>
+        
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Testing Projects -->
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-4">Testing Projects</h3>
+                        <ul class="text-lg space-y-3">
+                            <li>Stem Direct - <a href="https://app.stemdirect.online" target="_blank" class="text-yellow-400 hover:underline">Visit Website</a></li>
+                            <li>Must ERP</li>
+                            <li>OneG8 - <a href="https://oneg8.one/" target="_blank" class="text-yellow-400 hover:underline">Visit Website</a></li>
+                            <li>QDRO Express</li>
+                            <li>Sirius Sync</li>
+                            <li>Online Banking System</li>
+                        </ul>
+                    </div>
+        
+                    <!-- Web Development Projects -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Web Development Projects</h3>
+        
+                        <!-- Pokémon Project -->
+                        <div class="bg-gray-800 p-4 rounded-lg shadow-md mb-6">
+                            <img src="images/pockemon.png" alt="Pokémon Project Screenshot" class="mb-3 rounded-lg w-full">
+                            <p class="text-gray-300 mb-3">A fast and interactive Pokémon search app with real-time fuzzy search. Easily find Pokémon even with typos, use keyboard shortcuts for quick access, and enjoy a dynamic shuffled Pokémon list on each visit!</p>
+                            <div class="flex flex-col md:flex-row gap-2 mb-3">
+                                <a href="https://github.com/Himanshi-sa/pokemon" class="bg-yellow-500 text-white font-semibold rounded-lg px-4 py-2 hover:bg-yellow-600 transition-all duration-300 shadow-md text-center w-full md:w-auto">
+                                    GitHub Repository
+                                </a>
+                                <a href="https://pokemonnew.netlify.app/" class="bg-yellow-500 text-white font-semibold rounded-lg px-4 py-2 hover:bg-yellow-600 transition-all duration-300 shadow-md text-center w-full md:w-auto">
+                                    Live Website
+                                </a>
+                            </div>
+                        </div>
+        
+                        <!-- Dog API Project -->
+                        <div class="bg-gray-800 p-4 rounded-lg shadow-md">
+                            <img src="images/dog.png" alt="Dog API Project Screenshot" class="mb-3 rounded-lg w-full">
+                            <p class="text-gray-300 mb-3">German Shepherd API provides 20,000+ images across 120+ breeds. Fetches random or specific breed images dynamically.</p>
+                            <div class="flex flex-col md:flex-row gap-2 mb-3">
+                                <a href="https://github.com/Himanshi-sa/setter/blob/main/src/main.js" class="bg-yellow-500 text-white font-semibold rounded-lg px-4 py-2 hover:bg-yellow-600 transition-all duration-300 shadow-md text-center w-full md:w-auto">
+                                    GitHub Repository
+                                </a>
+                                <a href="https://dog-api-js.netlify.app/" class="bg-yellow-500 text-white font-semibold rounded-lg px-4 py-2 hover:bg-yellow-600 transition-all duration-300 shadow-md text-center w-full md:w-auto">
+                                    Live Website
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1"></div>
+        </div>
+        
+        
+        
+           
+
+        <!-- projects section ends here -->
+
+    <!-- contact section starts here -->
+    <div id="contact" class="contact-container grid grid-cols-12 bg-gray-800 text-white p-8 rounded-sm shadow-sm w-full">
+    
+        <!-- Left empty space (2 columns) -->
+        <div class="col-span-1"></div>
+    
+        <!-- Contact form (10 columns) -->
+        <div class="col-span-10">
+            <h2 class="text-2xl font-bold mb-6">Contact</h2>
+            <p class="mb-6">Feel free to contact me for any inquiries.</p>
+            
+            <form  name="contact" class="flex flex-col gap-4 w-full" netlify>
+              
+              <label for="name" class="font-semibold">Name:</label>
+              <input type="text" id="name" placeholder="Enter your name" 
+              name="name"
+                class="p-4 rounded-lg border border-gray-400 bg-gray-600 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 shadow-md w-full">
+        
+              <label for="email" class="font-semibold">Email:</label>
+              <input type="email" id="email" placeholder="Enter your email" name="email"
+                class="p-4 rounded-lg border border-gray-400 bg-gray-600 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 shadow-md w-full">
+        
+              <label for="message" class="font-semibold">Message:</label>
+              <textarea id="message" placeholder="Enter your message" rows="5" name="textarea"
+                class="p-4 rounded-lg border border-gray-400 bg-gray-600 text-gray-900 focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 shadow-md w-full"></textarea>
+        
+              <button type="submit"
+                class="bg-yellow-500 text-white font-semibold rounded-lg p-4 border-0 hover:bg-yellow-600 transition-all duration-300 shadow-md w-full">
+                Send Message
+              </button>
+              
+            </form>
+        </div>
+    
+        <!-- Right empty space (2 columns) -->
+        <div class="col-span-1"></div>
+    
+    </div>
+
+     <!-- contact section ends here -->
+    <!-- resume section starts here -->
+    <div id="resume" class="resume-container bg-black text-white p-8 rounded-sm shadow-sm w-full grid grid-cols-12">
+        <div class="col-span-1"></div>
+        <div class="col-span-10">
+       <h2  class="text-2xl font-bold mb-6">Resume</h2>
+       <p class="mb-6">Download my resume for a detailed look at my skills and experience.</p>
+       <a href="./images/HIMANSHI SAHU.pdf" class="bg-yellow-500 text-white font-semibold rounded-lg p-4 border-0 hover:bg-yellow-600 transition-all duration-300 shadow-md w-full">
+            Download Resume
+       </a>
+
+    </div>
+    <div class="col-span-1"></div>
+    </div>
+
+     <!-- resume section ends here --> 
+      <script  type="text/javascript" >
+ // Get the button
+let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Show button when user scrolls down 200px
+window.onscroll = function () {
+  if (window.scrollY > 200) {
+    scrollToTopBtn.classList.remove("hidden");
+    scrollToTopBtn.classList.add("flex");
+  } else {
+    scrollToTopBtn.classList.add("hidden");
+    scrollToTopBtn.classList.remove("flex");
+  }
+};
+
+// Scroll to top when button is clicked
+scrollToTopBtn.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+// scroll ends
+// nav menu 
+document.getElementById('menu-btn').addEventListener('click', function() {
+        document.getElementById('menu').classList.toggle('hidden');
+    });
+// nav menu
+
+      </script>
+</body>
+</html>
